@@ -1,0 +1,149 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 600px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart25682853847' class='rChart dimple'></div>  
+    
+    <script type="text/javascript">
+(function(){
+  var opts = {
+ "dom": "chart25682853847",
+"width":    800,
+"height":    600,
+"x": "value",
+"y": "holdingcompany",
+"groups": "variable",
+"type": "bar",
+"bounds": {
+ "x":    300,
+"y":     30,
+"width":    450,
+"height":    330 
+},
+"title": "US OCC Derivatives Data by Holding Company | Q2 2013",
+"id": "chart25682853847" 
+},
+    data = [{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"assets","value":2439494000000},{"holdingcompany":"CITIGROUP INC.","variable":"assets","value":1883988000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"assets","value":2125686000000},{"holdingcompany":"MORGAN STANLEY","variable":"assets","value":802691000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"assets","value":938611000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"assets","value":321966696000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"assets","value":1440563000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"assets","value":360514000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"assets","value":226985363000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"assets","value":304547667000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"assets","value":529030139000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"assets","value":171609928000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"assets","value":97236008000},{"holdingcompany":"U.S. BANCORP","variable":"assets","value":353415000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"assets","value":228945721000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"assets","value":118782563000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"assets","value":150627000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"assets","value":123360351000},{"holdingcompany":"KEYCORP","variable":"assets","value":90858779000},{"holdingcompany":"BB&T CORPORATION","variable":"assets","value":182735153000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"assets","value":296670314000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"assets","value":102261564000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"assets","value":122572679000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"assets","value":27803723000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"assets","value":151980000000},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"derivatives","value":72844543000000},{"holdingcompany":"CITIGROUP INC.","variable":"derivatives","value":61063085000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"derivatives","value":59041917000000},{"holdingcompany":"MORGAN STANLEY","variable":"derivatives","value":49396207000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"derivatives","value":46982118000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"derivatives","value":5131463064000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"derivatives","value":3916985000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"derivatives","value":1227997000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"derivatives","value":1183729036000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"derivatives","value":369332332000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"derivatives","value":290046284000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"derivatives","value":266337253000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"derivatives","value":263715781000},{"holdingcompany":"U.S. BANCORP","variable":"derivatives","value":111253000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"derivatives","value":109727120000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"derivatives","value":89781602000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"derivatives","value":73914000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"derivatives","value":71640242000},{"holdingcompany":"KEYCORP","variable":"derivatives","value":68911850000},{"holdingcompany":"BB&T CORPORATION","variable":"derivatives","value":64121395000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"derivatives","value":60873758000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"derivatives","value":60364333000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"derivatives","value":47351454000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"derivatives","value":41055829000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"derivatives","value":40323000000},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"futures","value":1641581000000},{"holdingcompany":"CITIGROUP INC.","variable":"futures","value":1246676000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"futures","value":2234932000000},{"holdingcompany":"MORGAN STANLEY","variable":"futures","value":1342198000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"futures","value":1312731000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"futures","value":75189335000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"futures","value":125345000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"futures","value":23065000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"futures","value":2436730000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"futures","value":48195100000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"futures","value":0},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"futures","value":23051354000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"futures","value":0},{"holdingcompany":"U.S. BANCORP","variable":"futures","value":900000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"futures","value":0},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"futures","value":3331000000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"futures","value":34684000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"futures","value":451370000},{"holdingcompany":"KEYCORP","variable":"futures","value":2054100000},{"holdingcompany":"BB&T CORPORATION","variable":"futures","value":50700000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"futures","value":0},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"futures","value":7069000000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"futures","value":0},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"futures","value":665760000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"futures","value":0},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"optionsExch","value":1680755000000},{"holdingcompany":"CITIGROUP INC.","variable":"optionsExch","value":4379494000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"optionsExch","value":1176219000000},{"holdingcompany":"MORGAN STANLEY","variable":"optionsExch","value":2460703000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"optionsExch","value":2229816000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"optionsExch","value":1022020000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"optionsExch","value":64486000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"optionsExch","value":15231000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"optionsExch","value":0},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"optionsExch","value":31350000000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"optionsExch","value":10324000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"optionsExch","value":11829449000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"optionsExch","value":0},{"holdingcompany":"U.S. BANCORP","variable":"optionsExch","value":2625000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"optionsExch","value":0},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"optionsExch","value":0},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"optionsExch","value":286000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"optionsExch","value":0},{"holdingcompany":"KEYCORP","variable":"optionsExch","value":0},{"holdingcompany":"BB&T CORPORATION","variable":"optionsExch","value":0},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"optionsExch","value":4818000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"optionsExch","value":0},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"optionsExch","value":0},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"optionsExch","value":776242000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"optionsExch","value":0},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"forwards","value":14993271000000},{"holdingcompany":"CITIGROUP INC.","variable":"forwards","value":8652672000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"forwards","value":11246618000000},{"holdingcompany":"MORGAN STANLEY","variable":"forwards","value":5608363000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"forwards","value":5070951000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"forwards","value":806505305000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"forwards","value":1059279000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"forwards","value":379002000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"forwards","value":1137310434000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"forwards","value":27716291000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"forwards","value":109245585000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"forwards","value":22499484000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"forwards","value":249593312000},{"holdingcompany":"U.S. BANCORP","variable":"forwards","value":42295000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"forwards","value":22760060000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"forwards","value":26459453000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"forwards","value":3327000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"forwards","value":15205847000},{"holdingcompany":"KEYCORP","variable":"forwards","value":8345484000},{"holdingcompany":"BB&T CORPORATION","variable":"forwards","value":14385144000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"forwards","value":5147288000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"forwards","value":2698510000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"forwards","value":8912051000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"forwards","value":33915865000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"forwards","value":25240000000},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"swaps","value":38685987000000},{"holdingcompany":"CITIGROUP INC.","variable":"swaps","value":34061809000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"swaps","value":35851274000000},{"holdingcompany":"MORGAN STANLEY","variable":"swaps","value":30449418000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"swaps","value":26687369000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"swaps","value":3591986136000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"swaps","value":2144898000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"swaps","value":621326000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"swaps","value":8141607000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"swaps","value":221333042000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"swaps","value":171509617000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"swaps","value":148652874000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"swaps","value":14061287000},{"holdingcompany":"U.S. BANCORP","variable":"swaps","value":51721000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"swaps","value":85554949000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"swaps","value":55469347000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"swaps","value":30403000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"swaps","value":37963419000},{"holdingcompany":"KEYCORP","variable":"swaps","value":50159236000},{"holdingcompany":"BB&T CORPORATION","variable":"swaps","value":39926159000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"swaps","value":54974761000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"swaps","value":38586419000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"swaps","value":34140385000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"swaps","value":3417718000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"swaps","value":15083000000},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"optionsOTC","value":9551607000000},{"holdingcompany":"CITIGROUP INC.","variable":"optionsOTC","value":9934289000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"optionsOTC","value":5403647000000},{"holdingcompany":"MORGAN STANLEY","variable":"optionsOTC","value":6076722000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"optionsOTC","value":8181097000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"optionsOTC","value":245234903000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"optionsOTC","value":474211000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"optionsOTC","value":189232000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"optionsOTC","value":35735705000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"optionsOTC","value":36873523000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"optionsOTC","value":5102733000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"optionsOTC","value":56067662000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"optionsOTC","value":36182000},{"holdingcompany":"U.S. BANCORP","variable":"optionsOTC","value":10449000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"optionsOTC","value":800313000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"optionsOTC","value":3548626000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"optionsOTC","value":5214000000},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"optionsOTC","value":16590238000},{"holdingcompany":"KEYCORP","variable":"optionsOTC","value":7234894000},{"holdingcompany":"BB&T CORPORATION","variable":"optionsOTC","value":9759392000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"optionsOTC","value":55857000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"optionsOTC","value":11990404000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"optionsOTC","value":2974994000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"optionsOTC","value":2280244000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"optionsOTC","value":0},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"creditderivatives","value":6291342000000},{"holdingcompany":"CITIGROUP INC.","variable":"creditderivatives","value":2788145000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"creditderivatives","value":3129227000000},{"holdingcompany":"MORGAN STANLEY","variable":"creditderivatives","value":3458803000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"creditderivatives","value":3500154000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"creditderivatives","value":411525365000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"creditderivatives","value":48766000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"creditderivatives","value":141000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"creditderivatives","value":104560000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"creditderivatives","value":3864376000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"creditderivatives","value":4178025000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"creditderivatives","value":4236430000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"creditderivatives","value":25000000},{"holdingcompany":"U.S. BANCORP","variable":"creditderivatives","value":3263000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"creditderivatives","value":611798000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"creditderivatives","value":973176000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"creditderivatives","value":0},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"creditderivatives","value":1429368000},{"holdingcompany":"KEYCORP","variable":"creditderivatives","value":1118136000},{"holdingcompany":"BB&T CORPORATION","variable":"creditderivatives","value":0},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"creditderivatives","value":691034000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"creditderivatives","value":20000000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"creditderivatives","value":1324024000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"creditderivatives","value":0},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"creditderivatives","value":0},{"holdingcompany":"JPMORGAN CHASE & CO.","variable":"spotfx","value":699500000000},{"holdingcompany":"CITIGROUP INC.","variable":"spotfx","value":1121049000000},{"holdingcompany":"BANK OF AMERICA CORPORATION","variable":"spotfx","value":392528000000},{"holdingcompany":"MORGAN STANLEY","variable":"spotfx","value":307058000000},{"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","variable":"spotfx","value":258864000000},{"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","variable":"spotfx","value":69875389000},{"holdingcompany":"WELLS FARGO & COMPANY","variable":"spotfx","value":8162000000},{"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","variable":"spotfx","value":77348000000},{"holdingcompany":"STATE STREET CORPORATION","variable":"spotfx","value":46823584000},{"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","variable":"spotfx","value":1315313000},{"holdingcompany":"GENERAL ELECTRIC CAPITAL CORPORATION","variable":"spotfx","value":977974000},{"holdingcompany":"SUNTRUST BANKS, INC.","variable":"spotfx","value":71980000},{"holdingcompany":"NORTHERN TRUST CORPORATION","variable":"spotfx","value":22642858000},{"holdingcompany":"U.S. BANCORP","variable":"spotfx","value":1579000000},{"holdingcompany":"TD BANK US HOLDING COMPANY","variable":"spotfx","value":9234000},{"holdingcompany":"REGIONS FINANCIAL CORPORATION","variable":"spotfx","value":23716000},{"holdingcompany":"ALLY FINANCIAL INC.","variable":"spotfx","value":0},{"holdingcompany":"FIFTH THIRD BANCORP","variable":"spotfx","value":386757000},{"holdingcompany":"KEYCORP","variable":"spotfx","value":1125946000},{"holdingcompany":"BB&T CORPORATION","variable":"spotfx","value":34300000},{"holdingcompany":"CAPITAL ONE FINANCIAL CORPORATION","variable":"spotfx","value":682000},{"holdingcompany":"UNIONBANCAL CORPORATION","variable":"spotfx","value":344990000},{"holdingcompany":"RBS CITIZENS FINANCIAL GROUP, INC.","variable":"spotfx","value":92768000},{"holdingcompany":"BOK FINANCIAL CORPORATION","variable":"spotfx","value":36184000},{"holdingcompany":"AMERICAN EXPRESS COMPANY","variable":"spotfx","value":1037000000}],
+    xAxis = {
+ "type": "addMeasureAxis",
+"showPercent": false 
+},
+    yAxis = {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+    zAxis = [],
+    colorAxis = [],
+    legend = [];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  //x axis
+  var x;
+  if(xAxis.measure) {
+    x = myChart[xAxis.type]("x",opts.x,xAxis.measure);
+  } else {
+    x = myChart[xAxis.type]("x", opts.x);
+  };
+  if(!(xAxis.type === "addPctAxis")) x.showPercent = xAxis.showPercent;
+  if (xAxis.orderRule) x.addOrderRule(xAxis.orderRule);
+  if (xAxis.grouporderRule) x.addGroupOrderRule(xAxis.grouporderRule);  
+  if (xAxis.overrideMin) x.overrideMin = xAxis.overrideMin;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.inputFormat) x.dateParseFormat = xAxis.inputFormat;
+  if (xAxis.outputFormat) x.tickFormat = xAxis.outputFormat;
+  //y axis
+  var y;
+  if(yAxis.measure) {
+    y = myChart[yAxis.type]("y",opts.y,yAxis.measure);
+  } else {
+    y = myChart[yAxis.type]("y", opts.y);
+  };
+  if(!(yAxis.type === "addPctAxis")) y.showPercent = yAxis.showPercent;
+  if (yAxis.orderRule) y.addOrderRule(yAxis.orderRule);
+  if (yAxis.grouporderRule) y.addGroupOrderRule(yAxis.grouporderRule);
+  if (yAxis.overrideMin) y.overrideMin = yAxis.overrideMin;
+  if (yAxis.overrideMax) y.overrideMax = yAxis.overrideMax;
+  if (yAxis.inputFormat) y.dateParseFormat = yAxis.inputFormat;
+  if (yAxis.outputFormat) y.tickFormat = yAxis.outputFormat;
+//z for bubbles
+    var z;
+  if (!(typeof(zAxis) === 'undefined') && zAxis.type){
+    if(zAxis.measure) {
+      z = myChart[zAxis.type]("z",opts.z,zAxis.measure);
+    } else {
+      z = myChart[zAxis.type]("z", opts.z);
+    };
+    if(!(zAxis.type === "addPctAxis")) z.showPercent = zAxis.showPercent;
+    if (zAxis.orderRule) z.addOrderRule(zAxis.orderRule);
+    if (zAxis.overrideMin) z.overrideMin = zAxis.overrideMin;
+    if (zAxis.overrideMax) z.overrideMax = zAxis.overrideMax;
+  }
+  if(d3.keys(colorAxis).length > 0) {
+    myChart[colorAxis.type](colorAxis.colorSeries,colorAxis.palette) ;
+  }
+  
+  //here need think I need to evaluate group and if missing do null
+  //as the first argument
+  //if provided need to use groups from opts
+  if(opts.hasOwnProperty("groups")) {
+    var s = myChart.addSeries( opts.groups, dimple.plot[opts.type] );
+    //series offers an aggregate method that we will also need to check if available
+    //options available are avg, count, max, min, sum
+    if (!(typeof(opts.aggregate) === 'undefined')) {
+      s.aggregate = eval(opts.aggregate);
+    }
+    if (!(typeof(opts.lineWeight) === 'undefined')) {
+      s.lineWeight = eval(opts.lineWeight);
+    }
+    if (!(typeof(opts.barGap) === 'undefined')) {
+      s.barGap = eval(opts.barGap);
+    }    
+  } else var s = myChart.addSeries( null, dimple.plot[opts.type] );
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(legend).forEach(function(d){
+      l[d] = legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+  
+  //add our title
+  d3.select(svg.node().parentNode).insert("h3","svg")
+    .text(opts.title);
+  
+})();
+</script>
+    
+  </body>
+</html>

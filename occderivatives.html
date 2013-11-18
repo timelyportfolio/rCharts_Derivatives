@@ -1,0 +1,149 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 600px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart25681f387ece' class='rChart dimple'></div>  
+    
+    <script type="text/javascript">
+(function(){
+  var opts = {
+ "dom": "chart25681f387ece",
+"width":    800,
+"height":    600,
+"x": "derivatives",
+"y": "holdingcompany",
+"groups": "holdingcompany",
+"type": "bar",
+"bounds": {
+ "x":    300,
+"y":     30,
+"width":    450,
+"height":    330 
+},
+"id": "chart25681f387ece",
+"title": "US OCC Derivatives Data by Holding Company | Q2 2013" 
+},
+    data = [{"rank":1,"holdingcompany":"JPMORGAN CHASE & CO.","state":"NY","assets":2439494000000,"derivatives":72844543000000,"futures":1641581000000,"optionsExch":1680755000000,"forwards":14993271000000,"swaps":38685987000000,"optionsOTC":9551607000000,"creditderivatives":6291342000000,"spotfx":699500000000},{"rank":2,"holdingcompany":"CITIGROUP INC.","state":"NY","assets":1883988000000,"derivatives":61063085000000,"futures":1246676000000,"optionsExch":4379494000000,"forwards":8652672000000,"swaps":34061809000000,"optionsOTC":9934289000000,"creditderivatives":2788145000000,"spotfx":1121049000000},{"rank":3,"holdingcompany":"BANK OF AMERICA CORPORATION","state":"NC","assets":2125686000000,"derivatives":59041917000000,"futures":2234932000000,"optionsExch":1176219000000,"forwards":11246618000000,"swaps":35851274000000,"optionsOTC":5403647000000,"creditderivatives":3129227000000,"spotfx":392528000000},{"rank":4,"holdingcompany":"MORGAN STANLEY","state":"NY","assets":802691000000,"derivatives":49396207000000,"futures":1342198000000,"optionsExch":2460703000000,"forwards":5608363000000,"swaps":30449418000000,"optionsOTC":6076722000000,"creditderivatives":3458803000000,"spotfx":307058000000},{"rank":5,"holdingcompany":"GOLDMAN SACHS GROUP, INC., THE","state":"NY","assets":938611000000,"derivatives":46982118000000,"futures":1312731000000,"optionsExch":2229816000000,"forwards":5070951000000,"swaps":26687369000000,"optionsOTC":8181097000000,"creditderivatives":3500154000000,"spotfx":258864000000},{"rank":6,"holdingcompany":"HSBC NORTH AMERICA HOLDINGS INC.","state":"NY","assets":321966696000,"derivatives":5131463064000,"futures":75189335000,"optionsExch":1022020000,"forwards":806505305000,"swaps":3591986136000,"optionsOTC":245234903000,"creditderivatives":411525365000,"spotfx":69875389000},{"rank":7,"holdingcompany":"WELLS FARGO & COMPANY","state":"CA","assets":1440563000000,"derivatives":3916985000000,"futures":125345000000,"optionsExch":64486000000,"forwards":1059279000000,"swaps":2144898000000,"optionsOTC":474211000000,"creditderivatives":48766000000,"spotfx":8162000000},{"rank":8,"holdingcompany":"BANK OF NEW YORK MELLON CORPORATION, THE","state":"NY","assets":360514000000,"derivatives":1227997000000,"futures":23065000000,"optionsExch":15231000000,"forwards":379002000000,"swaps":621326000000,"optionsOTC":189232000000,"creditderivatives":141000000,"spotfx":77348000000},{"rank":9,"holdingcompany":"STATE STREET CORPORATION","state":"MA","assets":226985363000,"derivatives":1183729036000,"futures":2436730000,"optionsExch":0,"forwards":1137310434000,"swaps":8141607000,"optionsOTC":35735705000,"creditderivatives":104560000,"spotfx":46823584000},{"rank":10,"holdingcompany":"PNC FINANCIAL SERVICES GROUP, INC., THE","state":"PA","assets":304547667000,"derivatives":369332332000,"futures":48195100000,"optionsExch":31350000000,"forwards":27716291000,"swaps":221333042000,"optionsOTC":36873523000,"creditderivatives":3864376000,"spotfx":1315313000}],
+    xAxis = {
+ "type": "addMeasureAxis",
+"showPercent": false 
+},
+    yAxis = {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+    zAxis = [],
+    colorAxis = [],
+    legend = [];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  //x axis
+  var x;
+  if(xAxis.measure) {
+    x = myChart[xAxis.type]("x",opts.x,xAxis.measure);
+  } else {
+    x = myChart[xAxis.type]("x", opts.x);
+  };
+  if(!(xAxis.type === "addPctAxis")) x.showPercent = xAxis.showPercent;
+  if (xAxis.orderRule) x.addOrderRule(xAxis.orderRule);
+  if (xAxis.grouporderRule) x.addGroupOrderRule(xAxis.grouporderRule);  
+  if (xAxis.overrideMin) x.overrideMin = xAxis.overrideMin;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.overrideMax) x.overrideMax = xAxis.overrideMax;
+  if (xAxis.inputFormat) x.dateParseFormat = xAxis.inputFormat;
+  if (xAxis.outputFormat) x.tickFormat = xAxis.outputFormat;
+  //y axis
+  var y;
+  if(yAxis.measure) {
+    y = myChart[yAxis.type]("y",opts.y,yAxis.measure);
+  } else {
+    y = myChart[yAxis.type]("y", opts.y);
+  };
+  if(!(yAxis.type === "addPctAxis")) y.showPercent = yAxis.showPercent;
+  if (yAxis.orderRule) y.addOrderRule(yAxis.orderRule);
+  if (yAxis.grouporderRule) y.addGroupOrderRule(yAxis.grouporderRule);
+  if (yAxis.overrideMin) y.overrideMin = yAxis.overrideMin;
+  if (yAxis.overrideMax) y.overrideMax = yAxis.overrideMax;
+  if (yAxis.inputFormat) y.dateParseFormat = yAxis.inputFormat;
+  if (yAxis.outputFormat) y.tickFormat = yAxis.outputFormat;
+//z for bubbles
+    var z;
+  if (!(typeof(zAxis) === 'undefined') && zAxis.type){
+    if(zAxis.measure) {
+      z = myChart[zAxis.type]("z",opts.z,zAxis.measure);
+    } else {
+      z = myChart[zAxis.type]("z", opts.z);
+    };
+    if(!(zAxis.type === "addPctAxis")) z.showPercent = zAxis.showPercent;
+    if (zAxis.orderRule) z.addOrderRule(zAxis.orderRule);
+    if (zAxis.overrideMin) z.overrideMin = zAxis.overrideMin;
+    if (zAxis.overrideMax) z.overrideMax = zAxis.overrideMax;
+  }
+  if(d3.keys(colorAxis).length > 0) {
+    myChart[colorAxis.type](colorAxis.colorSeries,colorAxis.palette) ;
+  }
+  
+  //here need think I need to evaluate group and if missing do null
+  //as the first argument
+  //if provided need to use groups from opts
+  if(opts.hasOwnProperty("groups")) {
+    var s = myChart.addSeries( opts.groups, dimple.plot[opts.type] );
+    //series offers an aggregate method that we will also need to check if available
+    //options available are avg, count, max, min, sum
+    if (!(typeof(opts.aggregate) === 'undefined')) {
+      s.aggregate = eval(opts.aggregate);
+    }
+    if (!(typeof(opts.lineWeight) === 'undefined')) {
+      s.lineWeight = eval(opts.lineWeight);
+    }
+    if (!(typeof(opts.barGap) === 'undefined')) {
+      s.barGap = eval(opts.barGap);
+    }    
+  } else var s = myChart.addSeries( null, dimple.plot[opts.type] );
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(legend).forEach(function(d){
+      l[d] = legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+  
+  //add our title
+  d3.select(svg.node().parentNode).insert("h3","svg")
+    .text(opts.title);
+  
+})();
+</script>
+    
+  </body>
+</html>
